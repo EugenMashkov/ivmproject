@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IVM Project - Vue.js</title>
+    <title>IEV Project - Vue.js</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -19,8 +20,8 @@
                 <nav class="navbar" :style="{ boxShadow: navbarShadow }" style="background: #f5f6f7 !important;">
                     <div class="container">
                         <div class="nav-brand">
-                            <img src="logo3.png" alt="Logo" class="logo-img">
-                            <span>IVM PROJECT</span>
+                            <img src="logo4.png" alt="Logo" class="logo-img">
+                            <span>IEV PROJECT</span>
                         </div>
                         <ul class="nav-menu" :class="{ active: mobileMenuOpen }">
                             <li><a href="#home" @click="scrollToSection('home')">Home</a></li>
@@ -40,8 +41,11 @@
                 <section id="home" class="hero" style="background: #f5f6f7 !important;">
                     <div class="container">
                         <h1 class="hero-title">Industrial Design <span class="separator">•</span> Product Development <span class="separator">•</span> Technical Drawing</h1>
-                        <div class="hero-image">
-                            <img src="IM1.jpeg" alt="IM1" class="hero-img">
+                        <div class="hero-content">
+                            <h2 class="about-title">Hi, I'm Eugen. I work with companies on mechanical design, product development, and project management, supporting projects from concept and basic engineering through to detailed engineering and delivery.<br><a href="#about-text" class="learn-more-link">Learn more about me →</a></h2>
+                            <div class="hero-image">
+                                <img src="IM3.jpg" alt="IM3" class="hero-img">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -49,11 +53,12 @@
                 <!-- About Section -->
                 <section id="about" class="section" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h2 class="section-title">About Us</h2>
+                        <h2 class="section-title">About Me</h2>
                         <div class="about-content">
-                            <div class="about-text">
-                                <p>We create beautiful, modern websites that deliver exceptional user experiences. Our focus is on clean design, performance, and accessibility.</p>
-                                <p>Whether you're a startup or an established business, we have the expertise to bring your vision to life.</p>
+                            <div id="about-text" class="about-text">
+                                <p>Mechanical engineer with over 12 years of experience in industrial design.</p>
+                                <p>Core experience in pressure vessels, steam boilers, piping systems and related industrial equipment for the energy, chemical, oil & gas, and food industries.</p>
+                                <p>Holds a Bachelor's and Master's degree in Mechanical Engineering and Mechatronics (2006–2012). From 2014 to 2016, worked on end-to-end mechanical development of high-end audio equipment for a startup in Warsaw, including full technical documentation, certification, and setup of production and supply chains. Over the following nine years, worked in Germany as a design engineer, project engineer, and project manager on pressure vessels, steam boilers, chemical reactors, and process piping in accordance with DIN EN, AD 2000, and ASME standards, contributing to international projects for clients such as Linde, Accsys, BAT, Nestlé, Shell, ADM, Hitachi, and others. Additionally, as a side project, I co-founded Dotyk Fingers, a startup focused on developing body-powered finger prostheses for people with disabilities, where I served as CEO and led the product's technical development.</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +67,7 @@
                 <!-- Services Section -->
                 <section id="services" class="section services-section" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h2 class="section-title">Our Services</h2>
+                        <h2 class="section-title">Services</h2>
                         <div class="services-grid">
                             <div 
                                 v-for="(service, index) in services" 
