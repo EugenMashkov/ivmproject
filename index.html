@@ -2,15 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>IEV Project - Vue.js</title>
+    <link rel="preload" as="image" href="IM3.jpg">
+    <link rel="preload" as="image" href="logo3.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=block" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=block" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .about-title {
+            font-size: 1.3rem !important;
+            font-weight: 400 !important;
+            padding-left: 10rem !important;
+            max-width: 600px !important;
+            line-height: 1.6 !important;
+            margin: 6rem 0 0 0 !important;
+            font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif !important;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero-image {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero-title {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .logo-img {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero-img {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 1.1rem !important;
+                padding-left: 0 !important;
+                margin: 1rem 0 0 0 !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" onerror="console.error('Failed to load Vue.js')"></script>
 </head>
 <body>
     <div id="app">
@@ -20,7 +74,7 @@
                 <nav class="navbar" :style="{ boxShadow: navbarShadow }" style="background: #f5f6f7 !important;">
                     <div class="container">
                         <div class="nav-brand">
-                            <img src="logo4.png" alt="Logo" class="logo-img">
+                            <img src="logo3.png" alt="Logo" class="logo-img">
                             <span>IEV PROJECT</span>
                         </div>
                         <ul class="nav-menu" :class="{ active: mobileMenuOpen }">
@@ -57,8 +111,8 @@
                         <div class="about-content">
                             <div id="about-text" class="about-text">
                                 <p>Mechanical engineer with over 12 years of experience in industrial design.</p>
-                                <p>Core experience in pressure vessels, steam boilers, piping systems and related industrial equipment for the energy, chemical, oil & gas, and food industries.</p>
-                                <p>Holds a Bachelor's and Master's degree in Mechanical Engineering and Mechatronics (2006–2012). From 2014 to 2016, worked on end-to-end mechanical development of high-end audio equipment for a startup in Warsaw, including full technical documentation, certification, and setup of production and supply chains. Over the following nine years, worked in Germany as a design engineer, project engineer, and project manager on pressure vessels, steam boilers, chemical reactors, and process piping in accordance with DIN EN, AD 2000, and ASME standards, contributing to international projects for clients such as Linde, Accsys, BAT, Nestlé, Shell, ADM, Hitachi, and others. Additionally, as a side project, I co-founded Dotyk Fingers, a startup focused on developing body-powered finger prostheses for people with disabilities, where I served as CEO and led the product's technical development.</p>
+                                <p>Core experience in pressure vessels, steam boilers, piping systems, steel structures, and related industrial equipment for the energy, chemical, oil & gas, and food industries.</p>
+                                <p>Holds a Bachelor's and Master's degree in Mechanical Engineering and Mechatronics (2006–2012). From 2014 to 2016, worked on end-to-end mechanical development of high-end audio equipment for a startup in Warsaw, including full technical documentation, certification, and setup of production and supply chains. Over the following nine years, worked in Germany as a design engineer, project engineer, and project manager on pressure vessels, steam boilers, chemical reactors, steel structures and process piping in accordance with DIN EN, AD 2000, and ASME standards, contributing to international projects for clients such as Linde, Accsys, BAT, Nestlé, Shell, ADM, Hitachi, and others. Additionally, as a side project, I co-founded Dotyk Fingers, a startup focused on developing body-powered finger prostheses for people with disabilities, where I served as CEO and led the product's technical development.</p>
                             </div>
                         </div>
                     </div>
@@ -68,16 +122,34 @@
                 <section id="services" class="section services-section" style="background: #f5f6f7 !important;">
                     <div class="container">
                         <h2 class="section-title">Services</h2>
-                        <div class="services-grid">
-                            <div 
-                                v-for="(service, index) in services" 
-                                :key="index"
-                                class="service-card"
-                            >
-                                <div class="service-icon">{{ service.icon }}</div>
-                                <h3>{{ service.title }}</h3>
-                                <p>{{ service.description }}</p>
+                        <div class="services-container">
+                            <div class="services-grid-wrapper">
+                                <div class="services-grid" ref="servicesGrid">
+                                    <div 
+                                        v-for="(service, index) in services" 
+                                        :key="index"
+                                        :class="['service-card', { hidden: index === 3 && !isScrolled }]"
+                                    >
+                                        <div class="service-icon" v-if="service.icon">{{ service.icon }}</div>
+                                        <img v-if="service.image" :src="service.image" alt="Service image" class="service-image">
+                                        <video v-if="service.video" :src="service.video" class="service-video" autoplay loop muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
+                                        <h3>{{ service.title }}</h3>
+                                        <p>{{ service.description }}</p>
+                                    </div>
+                                </div>
                             </div>
+                            <button 
+                                v-if="!isScrolled && services.length > 3 && !isMobile"
+                                class="services-arrow services-arrow-right" 
+                                @click="scrollServices"
+                                aria-label="Scroll services right"
+                            ></button>
+                            <button 
+                                v-if="isScrolled && !isMobile"
+                                class="services-arrow services-arrow-left" 
+                                @click="scrollServicesBack"
+                                aria-label="Scroll services left"
+                            ></button>
                         </div>
                     </div>
                 </section>
@@ -86,6 +158,7 @@
                 <section id="contact" class="section contact-section" style="background: #f5f6f7 !important;">
                     <div class="container">
                         <h2 class="section-title">Get In Touch</h2>
+                        <p class="contact-intro">You can contact me using the form below or via the following channels:<br>info@ievproject.com<br>Tel.: +49 162 45 75 966</p>
                         <form class="contact-form" @submit.prevent="handleSubmit">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -123,7 +196,7 @@
             <!-- Footer -->
             <footer class="footer">
                 <div class="container">
-                    <p>&copy; {{ currentYear }} My Website. All rights reserved.</p>
+                    <p>&copy; {{ currentYear }} IEV PROJECT. All rights reserved.</p>
                 </div>
             </footer>
         </div>
@@ -132,6 +205,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-c
