@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
@@ -79,23 +79,23 @@
                         </div>
                         <div class="nav-right">
                             <ul class="nav-menu" :class="{ active: mobileMenuOpen }">
-                                <li><a href="#home" @click="scrollToSection('home')">Home</a></li>
-                                <li><a href="#about" @click="scrollToSection('about')">About</a></li>
-                                <li><a href="#services" @click="scrollToSection('services')">Services</a></li>
-                                <li><a href="#contact" @click="scrollToSection('contact')">Contact</a></li>
+                                <li><a href="#home" @click="scrollToSection('home')">Startseite</a></li>
+                                <li><a href="#about" @click="scrollToSection('about')">Über mich</a></li>
+                                <li><a href="#services" @click="scrollToSection('services')">Dienstleistungen</a></li>
+                                <li><a href="#contact" @click="scrollToSection('contact')">Kontakt</a></li>
                                 <li class="mobile-lang-switcher">
                                     <div class="language-switcher">
-                                        <button class="lang-btn active" @click="switchLanguage('en')">EN</button>
-                                        <button class="lang-btn" @click="switchLanguage('de')">DE</button>
+                                        <button class="lang-btn" @click="switchLanguage('en')">EN</button>
+                                        <button class="lang-btn active" @click="switchLanguage('de')">DE</button>
                                     </div>
                                 </li>
                             </ul>
                             <div class="language-switcher">
-                                <button class="lang-btn active" @click="switchLanguage('en')">EN</button>
-                                <button class="lang-btn" @click="switchLanguage('de')">DE</button>
+                                <button class="lang-btn" @click="switchLanguage('en')">EN</button>
+                                <button class="lang-btn active" @click="switchLanguage('de')">DE</button>
                             </div>
                         </div>
-                        <button class="nav-toggle" @click="toggleMobileMenu" aria-label="Toggle navigation">
+                        <button class="nav-toggle" @click="toggleMobileMenu" aria-label="Navigation umschalten">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -106,9 +106,9 @@
                 <!-- Hero Section -->
                 <section id="home" class="hero" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h1 class="hero-title">Mechanical 3D CAD <span class="separator">•</span> Technical Documentation <span class="separator">•</span> Product Development</h1>
+                        <h1 class="hero-title">Mechanical 3D CAD <span class="separator">•</span> Technische Dokumentation <span class="separator">•</span> Produktentwicklung</h1>
                         <div class="hero-content">
-                            <h2 class="about-title">Hi, I'm Eugen.<br>I help companies deliver mechanical products and equipment by providing CAD, engineering, and technical documentation — from concept and basic engineering through to detailed design and handover.<br><a href="#about-text" class="learn-more-link">Learn more about me →</a></h2>
+                            <h2 class="about-title">Hallo, ich bin Eugen.<br>Ich helfe Unternehmen, mechanische Produkte und Ausrüstungen bereitzustellen, indem ich CAD, Engineering und technische Dokumentation bereitstelle — von der Konzeption und Basisplanung bis zum detaillierten Design und Übergabe.<br><a href="#about-text" class="learn-more-link">Mehr über mich erfahren →</a></h2>
                             <div class="hero-image">
                                 <img src="IM3.jpg" alt="IM3" class="hero-img">
                             </div>
@@ -119,12 +119,12 @@
                 <!-- About Section -->
                 <section id="about" class="section" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h2 class="section-title">About Me</h2>
+                        <h2 class="section-title">Über mich</h2>
                         <div class="about-content">
                             <div id="about-text" class="about-text">
-                                <p>Mechanical engineer with over 12 years of experience in industrial design.</p>
-                                <p>Core experience in pressure vessels, steam boilers, piping systems, steel structures, and related industrial equipment for the energy, chemical, oil & gas, and food industries.</p>
-                                <p>Holds a Bachelor's and Master's degree in Mechanical Engineering and Mechatronics (2006–2012). From 2014 to 2016, worked on end-to-end mechanical development of high-end audio equipment for a startup in Warsaw, including full technical documentation, certification, and setup of production and supply chains. Over the following nine years, worked in Germany as a design engineer, project engineer, and project manager on pressure vessels, steam boilers, chemical reactors, steel structures and process piping in accordance with DIN EN, AD 2000, and ASME standards, contributing to international projects for clients such as Linde, Accsys, BAT, Nestlé, Shell, ADM, Hitachi, and others. Additionally, as a side project, I co-founded Dotyk Fingers, a startup focused on developing body-powered finger prostheses for people with disabilities, where I served as CEO and led the product's technical development.</p>
+                                <p>Maschinenbauingenieur mit über 12 Jahren Erfahrung im Industriedesign.</p>
+                                <p>Kernkompetenzen in Druckbehältern, Dampfkesseln, Rohrleitungssystemen, Stahlkonstruktionen und verwandten Industrieanlagen für die Energie-, Chemie-, Öl- und Gas- sowie Lebensmittelindustrie.</p>
+                                <p>Abschlüsse als Bachelor und Master in Maschinenbau und Mechatronik (2006–2012). Von 2014 bis 2016 arbeitete ich an der vollständigen mechanischen Entwicklung von High-End-Audio-Geräten für ein Startup in Warschau, einschließlich vollständiger technischer Dokumentation, Zertifizierung und Aufbau von Produktions- und Lieferketten. In den folgenden neun Jahren arbeitete ich in Deutschland als Konstrukteur, Projektingenieur und Projektmanager an Druckbehältern, Dampfkesseln, chemischen Reaktoren, Stahlkonstruktionen und Prozessrohrleitungen nach DIN EN, AD 2000 und ASME-Normen und trug zu internationalen Projekten für Kunden wie Linde, Accsys, BAT, Nestlé, Shell, ADM, Hitachi und anderen bei. Zusätzlich gründete ich als Nebenprojekt Dotyk Fingers, ein Startup, das sich auf die Entwicklung von körpereigenen Fingerprothesen für Menschen mit Behinderungen konzentriert, wo ich als CEO fungierte und die technische Produktentwicklung leitete.</p>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                 <!-- Services Section -->
                 <section id="services" class="section services-section" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h2 class="section-title">Services</h2>
+                        <h2 class="section-title">Dienstleistungen</h2>
                         <div class="services-container">
                             <div class="services-grid-wrapper">
                                 <div class="services-grid" ref="servicesGrid">
@@ -143,7 +143,7 @@
                                         :class="['service-card', { hidden: index === 3 && !isScrolled }]"
                                     >
                                         <div class="service-icon" v-if="service.icon">{{ service.icon }}</div>
-                                        <img v-if="service.image" :src="service.image" alt="Service image" class="service-image">
+                                        <img v-if="service.image" :src="service.image" alt="Service-Bild" class="service-image">
                                         <video v-if="service.video" :src="service.video" class="service-video" autoplay loop muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
                                         <h3>{{ service.title }}</h3>
                                         <p>{{ service.description }}</p>
@@ -154,13 +154,13 @@
                                 v-if="!isScrolled && services.length > 3 && !isMobile"
                                 class="services-arrow services-arrow-right" 
                                 @click="scrollServices"
-                                aria-label="Scroll services right"
+                                aria-label="Dienstleistungen nach rechts scrollen"
                             ></button>
                             <button 
                                 v-if="isScrolled && !isMobile"
                                 class="services-arrow services-arrow-left" 
                                 @click="scrollServicesBack"
-                                aria-label="Scroll services left"
+                                aria-label="Dienstleistungen nach links scrollen"
                             ></button>
                         </div>
                     </div>
@@ -169,8 +169,8 @@
                 <!-- Contact Section -->
                 <section id="contact" class="section contact-section" style="background: #f5f6f7 !important;">
                     <div class="container">
-                        <h2 class="section-title">Get In Touch</h2>
-                        <p class="contact-intro">You can contact me using the form below or via the following channels:<br>info@ievproject.com<br>Tel.: +49 162 45 75 966</p>
+                        <h2 class="section-title">Kontakt aufnehmen</h2>
+                        <p class="contact-intro">Sie können mich über das untenstehende Formular oder über folgende Kanäle kontaktieren:<br>info@ievproject.com<br>Tel.: +49 162 45 75 966</p>
                         <form class="contact-form" @submit.prevent="handleSubmit">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -182,7 +182,7 @@
                                 >
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
+                                <label for="email">E-Mail</label>
                                 <input 
                                     type="email" 
                                     id="email" 
@@ -191,7 +191,7 @@
                                 >
                             </div>
                             <div class="form-group">
-                                <label for="message">Message</label>
+                                <label for="message">Nachricht</label>
                                 <textarea 
                                     id="message" 
                                     v-model="form.message" 
@@ -199,7 +199,7 @@
                                     required
                                 ></textarea>
                             </div>
-                            <button type="submit" class="cta-button">Send Message</button>
+                            <button type="submit" class="cta-button">Nachricht senden</button>
                         </form>
                     </div>
                 </section>
@@ -208,12 +208,12 @@
             <!-- Footer -->
             <footer class="footer">
                 <div class="container">
-                    <p>&copy; {{ currentYear }} IEV PROJECT. All rights reserved. | <a href="#impressum" class="impressum-link">Impressum</a> | <a href="#cookie-policy" class="impressum-link">Cookie-Richtlinie (EU)</a></p>
+                    <p>&copy; {{ currentYear }} IEV PROJECT. Alle Rechte vorbehalten. | <a href="#impressum" class="impressum-link">Impressum</a> | <a href="#cookie-policy" class="impressum-link">Cookie-Richtlinie (EU)</a></p>
                 </div>
             </footer>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script-de.js"></script>
 </body>
 </html>

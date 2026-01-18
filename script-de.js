@@ -1,7 +1,7 @@
 // Проверка загрузки Vue.js
 if (typeof Vue === 'undefined') {
     console.error('Vue.js не загружен. Проверьте подключение к интернету.');
-    document.body.innerHTML = '<div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;"><h1>Ошибка загрузки</h1><p>Не удалось загрузить Vue.js. Проверьте подключение к интернету и обновите страницу.</p></div>';
+    document.body.innerHTML = '<div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;"><h1>Ladefehler</h1><p>Vue.js konnte nicht geladen werden. Bitte überprüfen Sie Ihre Internetverbindung und aktualisieren Sie die Seite.</p></div>';
 } else {
     const { createApp } = Vue;
 
@@ -16,26 +16,26 @@ if (typeof Vue === 'undefined') {
                 {
                     icon: '',
                     image: 'dr6.png',
-                    title: 'Mechanical Design',
+                    title: 'Maschinenbau',
                     description: ''
                 },
                 {
                     icon: '',
                     image: 'dr1.png',
-                    title: 'Technical Drawing',
+                    title: 'Technische Zeichnung',
                     description: ''
                 },
                 {
                     icon: '',
                     image: 'dr8.png',
-                    title: 'Project Management',
+                    title: 'Projektmanagement',
                     description: ''
                 },
                 {
                     icon: '',
                     image: '',
                     video: 'df4.mov',
-                    title: 'Product Development',
+                    title: 'Produktentwicklung',
                     description: ''
                 }
             ],
@@ -142,7 +142,7 @@ if (typeof Vue === 'undefined') {
         handleSubmit() {
             // Form validation
             if (this.form.name && this.form.email && this.form.message) {
-                alert(`Thank you, ${this.form.name}! Your message has been received. We'll get back to you soon.`);
+                alert(`Vielen Dank, ${this.form.name}! Ihre Nachricht wurde erhalten. Wir werden uns bald bei Ihnen melden.`);
                 // Reset form
                 this.form = {
                     name: '',

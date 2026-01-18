@@ -70,6 +70,12 @@ body {
     align-items: center;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .nav-brand {
     display: flex;
     align-items: center;
@@ -104,6 +110,42 @@ body {
 
 .nav-menu a:hover {
     color: var(--primary-color);
+}
+
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 0;
+}
+
+.mobile-lang-switcher {
+    display: none;
+}
+
+.lang-btn {
+    background: var(--white);
+    color: var(--text-dark);
+    border: 1px solid #000000;
+    padding: 0.05rem 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+    border-radius: 0;
+    min-width: auto;
+    text-align: center;
+}
+
+.lang-btn:hover {
+    background: var(--text-dark);
+    color: var(--white);
+}
+
+.lang-btn.active {
+    background: var(--text-dark);
+    color: var(--white);
 }
 
 .nav-toggle {
@@ -527,6 +569,21 @@ body {
     justify-content: center;
 }
 
+.footer p {
+    margin: 0;
+}
+
+.impressum-link {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.impressum-link:hover {
+    opacity: 0.7;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -560,6 +617,23 @@ body {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-right .language-switcher {
+        display: none;
+    }
+
+    .mobile-lang-switcher {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+        border-top: 1px solid #e5e7eb;
+        margin-top: 1rem;
+    }
+
+    .mobile-lang-switcher .language-switcher {
+        display: flex;
+        gap: 0.5rem;
     }
 
     .hero {
