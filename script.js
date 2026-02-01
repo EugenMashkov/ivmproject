@@ -22,7 +22,7 @@ if (typeof Vue === 'undefined') {
                 {
                     icon: '',
                     image: 'dr1.png',
-                    title: 'Technical Drawing',
+                    title: 'Technical Documentation',
                     description: ''
                 },
                 {
