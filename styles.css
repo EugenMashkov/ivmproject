@@ -171,6 +171,50 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Subpage navigation (no Vue, always visible) */
+.subpage-nav .nav-menu {
+    position: static !important;
+    left: auto !important;
+}
+.subpage-nav .nav-toggle {
+    display: none !important;
+}
+.subpage-nav .nav-brand a,
+.subpage-nav .nav-brand a:hover {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.subpage-nav .logo-img-static {
+    height: 40px;
+    opacity: 1;
+}
+.subpage-nav .language-switcher a.lang-btn {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.subpage-nav .language-switcher a.lang-btn:hover {
+    background: var(--text-dark);
+    color: var(--white);
+}
+.subpage-nav .language-switcher a.lang-btn.active {
+    background: var(--text-dark);
+    color: var(--white);
+}
+@media (max-width: 768px) {
+    .subpage-nav .nav-menu {
+        position: static !important;
+        left: auto !important;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     background: #f5f6f7 !important;
