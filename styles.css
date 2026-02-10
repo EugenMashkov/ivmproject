@@ -279,6 +279,13 @@ body {
     color: var(--text-dark);
 }
 
+@media (min-width: 769px) {
+    .hero-title .separator:last-of-type,
+    #home .hero-title .separator:last-of-type {
+        display: none;
+    }
+}
+
 .hero {
     position: relative;
 }
@@ -687,8 +694,27 @@ body {
     }
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile: всё в столбик, ровные отступы слева/справа */
 @media (max-width: 768px) {
+    body,
+    .page-wrapper,
+    .top-section {
+        overflow-x: hidden;
+    }
+
+    .container,
+    #home .container,
+    .hero .container,
+    .section .container,
+    .navbar .container,
+    .footer .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -731,27 +757,54 @@ body {
         padding: 60px 0 10px 0 !important;
     }
 
+    #home .hero-title,
+    .hero .hero-title,
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem !important;
         white-space: normal;
-        line-height: 1.4;
+        line-height: 1.5;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    .hero-title .separator,
+    #home .hero-title .separator {
+        display: inline;
+        margin: 0;
+    }
+
+    .hero-title .separator::after,
+    #home .hero-title .separator::after {
+        content: '\A';
+        white-space: pre;
     }
 
     .hero-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         margin-top: 2rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .about-title {
         font-size: 1.1rem !important;
-        padding-left: 0;
-        margin: 1rem 0 0 0;
-        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 1rem 0 0 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .hero-image {
-        margin-top: -1rem !important;
+        margin-top: 1rem !important;
+        width: 100% !important;
+        justify-content: center;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
 
     #about {
@@ -775,15 +828,10 @@ body {
         font-size: 1.3rem !important;
     }
 
-    .hero-image {
-        width: 100%;
-        justify-content: center;
-        padding-right: 0;
-        margin-top: 2rem;
-    }
-
     .hero-img {
         max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-subtitle {
@@ -794,29 +842,53 @@ body {
         font-size: 2rem;
     }
 
+    .section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .about-content,
+    .about-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-text p {
+        padding: 0;
+    }
+
+    .services-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     .services-grid {
         grid-template-columns: 1fr !important;
         transform: none !important;
+        width: 100% !important;
     }
-    
+
     .services-grid.scrollable {
         grid-template-columns: 1fr !important;
         width: 100% !important;
         transform: none !important;
     }
-    
+
     .services-grid.scrollable .service-card.hidden {
         display: block !important;
     }
-    
+
     .service-card.hidden {
         display: block !important;
     }
-    
+
     .services-grid-wrapper {
         overflow: visible !important;
     }
-    
+
     .services-arrow {
         display: none !important;
     }
@@ -825,18 +897,59 @@ body {
         margin-top: -40px !important;
         padding-top: 0px !important;
     }
+
+    .contact-form,
+    .contact-intro {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .footer .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .footer p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
+    .container,
+    #home .container,
+    .hero .container,
+    .section .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
     .hero {
         padding: 50px 0 10px 0 !important;
     }
 
+    #home .hero-title,
+    .hero .hero-title,
     .hero-title {
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
         white-space: normal;
-        line-height: 1.3;
-        padding: 0 10px;
+        line-height: 1.5;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    .hero-title .separator,
+    #home .hero-title .separator {
+        display: inline;
+        margin: 0;
+    }
+
+    .hero-title .separator::after,
+    #home .hero-title .separator::after {
+        content: '\A';
+        white-space: pre;
     }
 
     .hero-content {
@@ -845,12 +958,13 @@ body {
 
     .about-title {
         font-size: 1.1rem !important;
-        padding-left: 0;
-        margin: 0.8rem 0 0 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0.8rem 0 0 0 !important;
     }
 
     .hero-image {
-        margin-top: -1.2rem !important;
+        margin-top: 1rem !important;
     }
 
     #about {
@@ -879,10 +993,6 @@ body {
         padding-top: 0px !important;
     }
 
-    .hero-content {
-        margin-top: 2rem;
-    }
-
     .hero-img {
         max-width: 100%;
     }
@@ -901,6 +1011,11 @@ body {
 
     .logo-img {
         height: 30px;
+    }
+
+    .footer .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 }
 

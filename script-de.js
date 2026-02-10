@@ -15,20 +15,20 @@ if (typeof Vue === 'undefined') {
             services: [
                 {
                     icon: '',
-                    image: 'dr6.png',
-                    title: 'Maschinenbau',
+                    image: 'dr11.png',
+                    title: '3D CAD Konstruktion',
                     description: ''
                 },
                 {
                     icon: '',
                     image: 'dr1.png',
-                    title: 'Technische Zeichnung',
+                    title: 'Technische Dokumentation',
                     description: ''
                 },
                 {
                     icon: '',
                     image: 'dr8.png',
-                    title: 'Projektmanagement',
+                    title: 'Projektabwicklung',
                     description: ''
                 },
                 {
